@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         prefs=getSharedPreferences("preference", MODE_PRIVATE)
         listener()
-
     }
 
     private fun listener() {
