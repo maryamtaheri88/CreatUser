@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.example.creatuser.databinding.ActivityMainBinding
 
 
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         prefs=getSharedPreferences("preference", MODE_PRIVATE)
         listener()
+        binding.buttonRemoveInfo.isVisible = false
     }
 
     private fun listener() {
@@ -51,14 +53,33 @@ class MainActivity : AppCompatActivity() {
        }
 
         binding.buttonShowInfo.setOnClickListener{
+
              binding.fullName.text = prefs.getString(fullNameKey, " name???")
              binding.userName.text = prefs.getString(userNameKey, " username???")
              binding.email.text = prefs.getString(emailKey, " email???")
              binding.password.text = prefs.getString(passwordKey, "password???")
              binding.gendar.text = prefs.getString(genderfKey, " gender???")
+
+
+
+            binding.fullName.isVisible = true
+            binding.userName.isVisible = true
+            binding.email.isVisible = true
+            binding.password.isVisible = true
+            binding.gendar.isVisible = true
+            binding.buttonRemoveInfo.isVisible = true
+
+
         }
 
         binding.buttonRemoveInfo.setOnClickListener {
+            binding.fullName.isVisible = false
+            binding.userName.isVisible = false
+            binding.email.isVisible = false
+            binding.password.isVisible = false
+            binding.gendar.isVisible = false
+
+            binding.buttonRemoveInfo.isVisible = false
 
         }
 

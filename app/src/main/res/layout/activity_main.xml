@@ -201,6 +201,7 @@
         app:layout_constraintEnd_toEndOf="@id/buttonShowInfo"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="@id/buttonShowInfo"
-        app:layout_constraintTop_toBottomOf="@+id/gendar"/>
+        app:layout_constraintTop_toBottomOf="@+id/gendar"
+       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
