@@ -79,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/textgender"
+        app:layout_constraintStart_toStartOf="@id/textgender"
         android:orientation="horizontal">
 
         <RadioButton
@@ -141,5 +142,65 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/fullName"
+        app:layout_constraintTop_toBottomOf="@id/buttonShowInfo"
+        app:layout_constraintEnd_toEndOf="@id/buttonShowInfo"
+        app:layout_constraintStart_toStartOf="@id/buttonShowInfo"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@id/fullName"
+        app:layout_constraintEnd_toEndOf="@id/fullName"
+        app:layout_constraintStart_toStartOf="@id/fullName"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/email"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintEnd_toEndOf="@id/userName"
+        app:layout_constraintStart_toStartOf="@id/userName"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/password"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        app:layout_constraintEnd_toEndOf="@id/email"
+        app:layout_constraintStart_toStartOf="@id/email"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/gendar"
+        app:layout_constraintTop_toBottomOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/password"
+        app:layout_constraintStart_toStartOf="@id/password"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/buttonRemoveInfo"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink"
+        android:text="removeInfo"
+        android:textAllCaps="false"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/buttonShowInfo"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@id/buttonShowInfo"
+        app:layout_constraintTop_toBottomOf="@+id/gendar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
